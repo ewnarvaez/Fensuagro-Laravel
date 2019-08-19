@@ -10,7 +10,7 @@ $factory->define(Entidad::class, function (Faker $faker) {
     return [
         'entidadnit' => $faker->unique()->randomNumber($nbDigits = NULL, $strict = false),
         'entidadnombre' => $faker->name(),
-        'entidadrol' => "demandante",
+        'entidadrol' => "demandada",
         'entidaddirector' => $faker->name(),
         'entidaddireccion' => $faker->streetAddress(),
         'entidadtelefono' => $faker->phoneNumber(),

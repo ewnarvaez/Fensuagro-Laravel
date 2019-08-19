@@ -1,9 +1,9 @@
 <?php
 
-use App\Models\OrganizacionSocial;
+use App\Models\Denuncia;
 use Illuminate\Database\Seeder;
 
-class TablaOrganizacionSocialSeeder extends Seeder
+class TablaDenunciaSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -12,6 +12,6 @@ class TablaOrganizacionSocialSeeder extends Seeder
      */
     public function run()
     {
-        factory(OrganizacionSocial::class)->times(5)->create();
+        factory(Denuncia::class)->times(10)->create();
     }
 }

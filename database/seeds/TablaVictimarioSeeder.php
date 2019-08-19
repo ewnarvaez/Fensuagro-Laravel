@@ -1,9 +1,9 @@
 <?php
 
-use App\Models\OrganizacionSocial;
+use App\Models\Victimario;
 use Illuminate\Database\Seeder;
 
-class TablaOrganizacionSocialSeeder extends Seeder
+class TablaVictimarioSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -12,6 +12,6 @@ class TablaOrganizacionSocialSeeder extends Seeder
      */
     public function run()
     {
-        factory(OrganizacionSocial::class)->times(5)->create();
+        factory(Victimario::class)->times(15)->create();
     }
 }

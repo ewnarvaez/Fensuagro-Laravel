@@ -13,6 +13,6 @@ class TablaEntidadSeeder extends Seeder
      */
     public function run()
     {
-        factory(Entidad::class)->times(3)->create();
+        factory(Entidad::class)->times(10)->create();
     }
 }
