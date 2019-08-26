@@ -13,7 +13,7 @@
                     <h3 class="box-title">Crear Menú</h3>                    
                 </div>
                  <!-- /.box-header -->
-                <form class="form-horizontal" id="form-general" action="{{route('guardar-menu')}}" method="POST">
+                <form class="form-horizontal" id="form-general" action="{{route('guardar-menu')}}" method="POST" autocomplete="off">
                     @csrf
                     <div class="box-body">
                         @include('admin.menu.form')
@@ -28,4 +28,8 @@
             </div>
         </div>
     </div>
+@endsection
+
+@section("scripts")
+    <script src="{{asset("assets/pages/scripts/admin/crear.js")}}" type="text/javascript"></script>
 @endsection

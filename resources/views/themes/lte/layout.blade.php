@@ -17,7 +17,7 @@
         <!-- AdminLTE Skins. Choose a skin from the css/skins
             folder instead of downloading all of them to reduce the load. -->
         <link rel="stylesheet" href="{{asset("assets/$theme/dist/css/skins/_all-skins.min.css")}}">
-
+        <!-- Estilos Personalizados -->
         <link rel="stylesheet" href="{{asset("css/custom.css")}}">
 
         @yield('styles')
@@ -62,6 +62,10 @@
         <script src="{{asset("assets/$theme/bower_components/fastclick/lib/fastclick.js")}}"></script>
         <!-- AdminLTE App -->
         <script src="{{asset("assets/$theme/dist/js/adminlte.min.js")}}"></script>
+         <!-- Jquery Validation -->
+        <script src="{{asset("js/jquery-validation/jquery.validate.min.js")}}"></script>
+        <script src="{{asset("js/jquery-validation/localization/messages_es.min.js")}}"></script>
+        <script src="{{asset("js/funciones.js")}}"></script>
 
         @yield('scripts')
         
