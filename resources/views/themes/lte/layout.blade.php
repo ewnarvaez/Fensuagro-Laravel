@@ -17,10 +17,14 @@
         <!-- AdminLTE Skins. Choose a skin from the css/skins
             folder instead of downloading all of them to reduce the load. -->
         <link rel="stylesheet" href="{{asset("assets/$theme/dist/css/skins/_all-skins.min.css")}}">
-        <!-- Estilos Personalizados -->
-        <link rel="stylesheet" href="{{asset("css/custom.css")}}">
+
+        <!-- css plugin para mensajes de acción flotantes -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 
         @yield('styles')
+
+        <!-- Estilos Personalizados -->
+        <link rel="stylesheet" href="{{asset("css/custom.css")}}">
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -62,10 +66,19 @@
         <script src="{{asset("assets/$theme/bower_components/fastclick/lib/fastclick.js")}}"></script>
         <!-- AdminLTE App -->
         <script src="{{asset("assets/$theme/dist/js/adminlte.min.js")}}"></script>
-         <!-- Jquery Validation -->
+        <!-- Pluggins JS -->
+        @yield('scriptsPlugins')
+        <!-- Jquery Validation -->
         <script src="{{asset("js/jquery-validation/jquery.validate.min.js")}}"></script>
         <script src="{{asset("js/jquery-validation/localization/messages_es.min.js")}}"></script>
         <script src="{{asset("js/funciones.js")}}"></script>
+
+        <!-- Plugin para mensajes de alerta emergentes -->
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <!-- Plugin para mensajes de alerta flotantes -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+        <!-- ToolTip JS Para los íconos de edición y eliminación entre otros-->
+        <script src="{{asset("js/tooltip.js")}}"></script>
 
         @yield('scripts')
         

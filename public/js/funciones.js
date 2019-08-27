@@ -43,7 +43,7 @@ var Fensuagro = function () {
                 newestOnTop: true,
                 positionClass: 'toast-top-right',
                 preventDuplicates: true,
-                timeOut: '5000'
+                timeOut: '3000'
             };
             if (tipo == 'error') {
                 toastr.error(mensaje, titulo);
