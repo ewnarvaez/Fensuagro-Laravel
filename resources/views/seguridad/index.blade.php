@@ -52,7 +52,7 @@
     <form action="{{route('login-post')}}" method="post" autocomplete="off">
       @csrf
       <div class="form-group has-feedback">
-        <input type="text" name="usuario" class="form-control" value="{{old('usaurio')}}" placeholder="Usuario" required>
+        <input type="text" name="usuario" class="form-control" value="{{old('usuario')}}" placeholder="Usuario" required>
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">

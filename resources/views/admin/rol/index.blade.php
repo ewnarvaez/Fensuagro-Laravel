@@ -20,7 +20,7 @@ Roles
                     </a>
                 </div>
             </div>
-            <div class="box-body">
+            <div class="box-body table-responsive no-padding">
                 <table class="table table-striped table-bordered table-hover" id="tabla-data">
                     <thead>
                         <tr>

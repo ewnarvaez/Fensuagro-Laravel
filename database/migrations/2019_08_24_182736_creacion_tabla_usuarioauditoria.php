@@ -15,10 +15,10 @@ class CreacionTablaUsuarioauditoria extends Migration
     {
         Schema::create('usuario_auditoria', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('usuarioid');
-            $table->foreign('usuarioid', 'fk_usuarioauditoria_usuario')->references('id')->on('usuario')->onDelete('restrict')->onUpdate('restrict');
-            $table->unsignedBigInteger('auditoriaid');
-            $table->foreign('usuarioid', 'fk_usuarioauditoria_auditoria')->references('id')->on('auditoria')->onDelete('restrict')->onUpdate('restrict');
+            $table->unsignedBigInteger('usuario_id');
+            $table->foreign('usuario_id', 'fk_usuarioauditoria_usuario')->references('id')->on('usuario')->onDelete('restrict')->onUpdate('restrict');
+            $table->unsignedBigInteger('auditoria_id');
+            $table->foreign('usuario_id', 'fk_usuarioauditoria_auditoria')->references('id')->on('auditoria')->onDelete('restrict')->onUpdate('restrict');
             $table->timestamps();
         });
     }

@@ -21,9 +21,12 @@
         Route::get('permiso/crear', 'PermisoController@crear')->name('crear-permiso');
         /*RUTAS DEL MENU*/
         Route::get('menu', 'MenuController@index')->name('menu');
-        Route::get('menu/crear', 'MenuController@crear')->name('crear-menu');
+        Route::get('menu/crear', 'MenuController@crear')->name('crear-menu');        
         Route::post('menu', 'MenuController@guardar')->name('guardar-menu');
         Route::post('menu/guardar-orden', 'MenuController@guardarOrden')->name('guardar-orden');
+        Route::get('menu/{id}/editar', 'MenuController@editar')->name('editar-menu');
+        Route::put('menu/{id}', 'MenuController@actualizar')->name('actualizar-menu');
+        Route::get('menu/{id}/eliminar', 'MenuController@eliminar')->name('eliminar-menu');
         /*RUTAS DE ROL*/
         Route::get('rol', 'RolController@index')->name('rol');
         Route::get('rol/crear', 'RolController@crear')->name('crear-rol');
@@ -34,6 +37,13 @@
         /*RUTAS DE MENU-ROL*/
         Route::get('menu-rol', 'MenuRolController@index')->name('menu-rol');
         Route::post('menu-rol', 'MenuRolController@guardar')->name('guardar-menu-rol');
+        /*RUTAS DE PERMISO*/
+        Route::get('permiso', 'PermisoController@index')->name('permiso');
+        Route::post('permiso', 'PermisoController@guardar')->name('guardar-permiso');
+        Route::get('permiso/crear', 'PermisoController@crear')->name('crear-permiso');
+        Route::get('permiso/{id}/editar', 'PermisoController@editar')->name('editar-permiso');
+        Route::put('permiso/{id}', 'PermisoController@actualizar')->name('actualizar-permiso');
+        Route::delete('permiso/{id}', 'PermisoController@eliminar')->name('eliminar-permiso');
 });
 
 

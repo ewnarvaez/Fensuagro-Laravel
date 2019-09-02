@@ -15,4 +15,7 @@ $(document).ready(function () {
         html: true,
         container: 'body'
     });
+    /*Agrega la clase active al padre del menú que se encuentre activo
+    para que permanezca expandido y no se colapse al elegir una opción del menú*/
+    $('ul.sidebar-menu').find('li.active').parents('li').addClass('active');
 });
