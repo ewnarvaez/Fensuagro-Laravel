@@ -43,7 +43,14 @@
         Route::get('permiso/crear', 'PermisoController@crear')->name('crear-permiso');
         Route::get('permiso/{id}/editar', 'PermisoController@editar')->name('editar-permiso');
         Route::put('permiso/{id}', 'PermisoController@actualizar')->name('actualizar-permiso');
-        Route::delete('permiso/{id}', 'PermisoController@eliminar')->name('eliminar-permiso');
+        Route::delete('permiso/{id}', 'PermisoController@eliminar')->name('eliminar-permiso');   
+        
+
+        /*RUTAS DE USUARIO*/
+        Route::get('usuario','UsuarioController@index')->name('usuario');
 });
+
+
+
 
 

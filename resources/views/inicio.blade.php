@@ -1,2 +1,2 @@
-@include("themes.$theme.layout")
+@extends("themes.$theme.layout")
 @include('includes.success-message')

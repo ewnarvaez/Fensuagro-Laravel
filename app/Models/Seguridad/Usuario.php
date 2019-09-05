@@ -19,7 +19,7 @@ class Usuario extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'usuario', 'nombre', 'password', 'timestamp'
+        'usuario', 'nombre', 'password', 'created_at', 'updated_at'
     ];
 
     public function roles(){
