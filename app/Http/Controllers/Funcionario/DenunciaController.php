@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Denuncia\Controllers;
+namespace App\Http\Controllers\Funcionario;
 
+use App\Http\Controllers\Controller;
 use App\Models\Denuncia\Denuncia;
 use Illuminate\Http\Request;
 
@@ -16,7 +17,7 @@ class DenunciaController extends Controller
     {
         can('listar-denuncias');
         $datos = Denuncia::orderBy('id')->get();
-        return view('denuncia.index', compact('datos'));
+        return view('funcionario.denuncia.index', compact('datos'));
     }
 
     /**

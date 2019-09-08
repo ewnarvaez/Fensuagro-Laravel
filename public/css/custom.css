@@ -26,3 +26,28 @@ label.requerido:after{
 .pl-40{
     padding-left:40px !important;
 } 
+
+.skin-blue .main-header .navbar {
+    background-color: #e4e10b;
+}
+
+.skin-blue .main-header .navbar .sidebar-toggle:hover {
+    background-color: #007841; 
+}
+
+.skin-blue .main-header .logo {
+    background-color: #e4e10b;   
+}
+
+.skin-blue .main-header .logo:hover {
+    background-color: #007841;   
+}
+
+.skin-blue .main-sidebar {
+    background-color: #007841;
+}
+
+.skin-blue .main-header li.user-header {
+    background-color: #007841;
+}
+

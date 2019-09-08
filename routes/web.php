@@ -16,9 +16,7 @@
     Route::post('seguridad/login','Seguridad\LoginController@login')->name('login-post');
     Route::get('seguridad/logout','Seguridad\LoginController@logout')->name('logout');
     Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => ['auth', 'superadmin']], function () {
-        Route::get('', 'AdminController@index');
-        Route::get('permiso', 'PermisoController@index')->name('permiso');
-        Route::get('permiso/crear', 'PermisoController@crear')->name('crear-permiso');
+        Route::get('', 'AdminController@index');        
         /*RUTAS DEL MENU*/
         Route::get('menu', 'MenuController@index')->name('menu');
         Route::get('menu/crear', 'MenuController@crear')->name('crear-menu');        
@@ -43,12 +41,23 @@
         Route::get('permiso/crear', 'PermisoController@crear')->name('crear-permiso');
         Route::get('permiso/{id}/editar', 'PermisoController@editar')->name('editar-permiso');
         Route::put('permiso/{id}', 'PermisoController@actualizar')->name('actualizar-permiso');
-        Route::delete('permiso/{id}', 'PermisoController@eliminar')->name('eliminar-permiso');   
-        
+        Route::delete('permiso/{id}', 'PermisoController@eliminar')->name('eliminar-permiso');         
+        /*RUTAS DE MENU-ROL*/
+        Route::get('permiso-rol', 'PermisoRolController@index')->name('permiso-rol');
+        Route::post('permiso-rol', 'PermisoRolController@guardar')->name('guardar-permiso-rol');
 
         /*RUTAS DE USUARIO*/
         Route::get('usuario','UsuarioController@index')->name('usuario');
-});
+    });
+
+    Route::group(['prefix' => 'func', 'namespace' => 'Funcionario', 'middleware' => ['auth']], function () {
+         /*RUTAS DE ENTIDAD*/
+         Route::get('entidad', 'EntidadController@index')->name('entidad');
+         Route::get('entidad/crear', 'EntidadController@crear')->name('crear-entidad');
+         Route::post('entidad', 'EntidadController@guardar')->name('guardar-entidad');
+         Route::get('entidad/{id}/editar', 'EntidadController@editar')->name('editar-entidad');
+         Route::put('entidad/{id}', 'EntidadController@actualizar')->name('actualizar-entidad');
+    });
 
 
 
