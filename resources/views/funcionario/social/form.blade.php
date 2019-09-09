@@ -11,30 +11,6 @@
     </div>
 </div> 
 <div class="form-group">
-    <label for="rol" class="col-lg-3 control-label requerido">Rol</label>
-    <div class="col-lg-8">
-    <select name="rol" id="rol" class="form-control" required>
-            @if (isset($data->rol))
-            <option>{{old('rol', $data->rol)}}</option>
-            @if ($data->rol == 'Demandada')
-            <option>Demandante</option>
-            @else
-            <option>Demandada</option>
-        @endif               
-        @else
-        <option>Demandada</option>
-        <option>Demandante</option>
-        @endif       
-    </select>
-    </div>
-</div> 
-<div class="form-group">
-    <label for="director" class="col-lg-3 control-label ">Director</label>
-    <div class="col-lg-8">
-    <input type="text" name="director" id="director" class="form-control" value="{{old('director', $data->director ?? '')}}"/>
-    </div>
-</div> 
-<div class="form-group">
     <label for="direccion" class="col-lg-3 control-label ">Dirección</label>
     <div class="col-lg-8">
     <input type="text" name="direccion" id="direccion" class="form-control" value="{{old('direccion', $data->direccion ?? '')}}" />
@@ -45,10 +21,31 @@
     <div class="col-lg-8">
     <input type="text" name="telefono" id="telefono" class="form-control" value="{{old('telefono', $data->telefono ?? '')}}" />
     </div>
-</div> 
+</div>
 <div class="form-group">
-    <label for="correo" class="col-lg-3 control-label ">Correo</label>
+    <label for="responsable" class="col-lg-3 control-label ">Responsable</label>
     <div class="col-lg-8">
-    <input type="text" name="correo" id="correo" class="form-control" value="{{old('correo', $data->correo ?? '')}}" />
+    <input type="text" name="responsable" id="responsable" class="form-control" value="{{old('director', $data->responsable ?? '')}}"/>
     </div>
 </div> 
+<div class="form-group">
+    <label for="sector" class="col-lg-3 control-label">Sector</label>
+    <div class="col-lg-8">
+        <select name="sector" id="sector" class="form-control" >  
+            @if (isset($data->sector))
+                <option>{{old('sector', $data->sector)}}</option>
+                @foreach ($sectores as $key => $item)
+                    @if ($item["nombre"] != $data->sector)
+                        <option>{{$item["nombre"]}}</option> 
+                    @endif                
+                @endforeach                      
+            @else
+                @foreach ($sectores as $key => $item)                
+                        <option>{{$item["nombre"]}}</option>                 
+                @endforeach
+            @endif    
+            
+        </select>
+    </div>
+</div> 
+

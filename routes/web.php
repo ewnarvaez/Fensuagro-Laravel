@@ -51,12 +51,18 @@
     });
 
     Route::group(['prefix' => 'func', 'namespace' => 'Funcionario', 'middleware' => ['auth']], function () {
-         /*RUTAS DE ENTIDAD*/
-         Route::get('entidad', 'EntidadController@index')->name('entidad');
-         Route::get('entidad/crear', 'EntidadController@crear')->name('crear-entidad');
-         Route::post('entidad', 'EntidadController@guardar')->name('guardar-entidad');
-         Route::get('entidad/{id}/editar', 'EntidadController@editar')->name('editar-entidad');
-         Route::put('entidad/{id}', 'EntidadController@actualizar')->name('actualizar-entidad');
+        /*RUTAS DE ENTIDAD*/
+        Route::get('entidad', 'EntidadController@index')->name('entidad');
+        Route::get('entidad/crear', 'EntidadController@crear')->name('crear-entidad');
+        Route::post('entidad', 'EntidadController@guardar')->name('guardar-entidad');
+        Route::get('entidad/{id}/editar', 'EntidadController@editar')->name('editar-entidad');
+        Route::put('entidad/{id}', 'EntidadController@actualizar')->name('actualizar-entidad');
+        /*RUTAS DE ENTIDAD*/
+        Route::get('social', 'SocialController@index')->name('social');
+        Route::get('social/crear', 'SocialController@crear')->name('crear-social');
+        Route::post('social', 'SocialController@guardar')->name('guardar-social');
+        Route::get('social/{id}/editar', 'SocialController@editar')->name('editar-social');
+        Route::put('social/{id}', 'SocialController@actualizar')->name('actualizar-social');
     });
 
 

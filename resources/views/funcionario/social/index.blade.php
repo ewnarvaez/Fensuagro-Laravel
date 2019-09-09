@@ -1,6 +1,6 @@
 @extends("themes.$theme.layout")
 @section('titulo')
-    Entidades
+    Social
 @endsection
 
 @section('contenido')
@@ -9,9 +9,9 @@
             @include('includes.success-message')
             <div class="box box-primary">
                 <div class="box-header with-border">
-                    <h3 class="box-title">Listado Entidades</h3>  
+                    <h3 class="box-title">Organizaciones Sociales</h3>  
                     <div class="box-tools pull-right">
-                        <a href="{{route('crear-entidad')}}" class="btn btn-block btn-success btn-sm">
+                        <a href="{{route('crear-social')}}" class="btn btn-block btn-success btn-sm">
                             <i class="fa fa-fw fa-plus-circle"></i> Nuevo registro
                         </a>
                     </div>                  
@@ -22,23 +22,21 @@
                         <thead>
                             <tr>
                                 <th>Nombre</th>                                
-                                <th>Director</th>
-                                <th>Rol</th>
+                                <th>Responsable</th>
+                                <th>Sector</th>
                                 <th>Telefono</th>
-                                <th>Correo</th>
                                 <th class="width70"></th>
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($data as $entidad)
+                            @foreach ($data as $social)
                                 <tr>
-                                    <td>{{$entidad->nombre}}</td>
-                                    <td>{{$entidad->director}}</td>
-                                    <td>{{$entidad->rol}}</td>
-                                    <td>{{$entidad->telefono}}</td>
-                                    <td>{{$entidad->correo}}</td>
+                                    <td>{{$social->nombre}}</td>
+                                    <td>{{$social->responsable}}</td>
+                                    <td>{{$social->sector}}</td>
+                                    <td>{{$social->telefono}}</td>
                                     <td>
-                                        <a href="{{route('editar-entidad', ['id' => $entidad->id])}}" class="btn-accion-tabla tooltipsC" title="Editar este registro">
+                                        <a href="{{route('editar-social', ['id' => $social->id])}}" class="btn-accion-tabla tooltipsC" title="Editar este registro">
                                             <i class="fa fa-fw fa-pencil"></i>
                                         </a>                                        
                                     </td>

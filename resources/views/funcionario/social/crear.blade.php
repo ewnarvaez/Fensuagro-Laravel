@@ -1,6 +1,6 @@
 @extends("themes.$theme.layout")
 @section('titulo')
-    Entidad
+    Social
 @endsection
 
 @section("scripts")
@@ -13,17 +13,17 @@
         @include('includes.error-form')
         <div class="box box-danger">
             <div class="box-header with-border">
-                <h3 class="box-title">Crear Entidad</h3>
+                <h3 class="box-title">Crear Organización Social</h3>
                 <div class="box-tools pull-right">
-                    <a href="{{route('entidad')}}" class="btn btn-block btn-success btn-sm">
+                    <a href="{{route('social')}}" class="btn btn-block btn-success btn-sm">
                         <i class="fa fa-fw fa-reply-all"></i> Volver al listado
                     </a>
                 </div>
             </div>
-            <form action="{{route('guardar-entidad')}}" id="form-general" class="form-horizontal" method="POST" autocomplete="off">
+            <form action="{{route('guardar-social')}}" id="form-general" class="form-horizontal" method="POST" autocomplete="off">
                 @csrf
                 <div class="box-body">
-                    @include('funcionario.entidad.form')
+                    @include('funcionario.social.form')
                 </div>
                 <div class="box-footer">
                     <div class="col-lg-3"></div>
